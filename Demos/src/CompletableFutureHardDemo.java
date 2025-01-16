@@ -1,9 +1,13 @@
 import java.sql.Time;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.concurrent.*;
 
 public class CompletableFutureHardDemo {
     // 比较难的东西
     public static void mainOld(String[] args) throws Exception{
+
+        Deque<Integer> deque = new LinkedList<>();
 
         // 创建一个线程池，最大线程数为5
         int corePoolSize = 2; // 核心线程数
