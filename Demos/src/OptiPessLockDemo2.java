@@ -1,8 +1,9 @@
-//import java.util.concurrent.atomic.AtomicInteger;
-//import java.util.concurrent.locks.ReentrantLock;
-//
-//public class OptiPessLockDemo2 {
-//    // 乐观锁的调用方式
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
+
+// 废弃的
+public class OptiPessLockDemo2 {
+    // 乐观锁的调用方式
 //    private AtomicInteger atomicInteger = new AtomicInteger();
 //    atomicInteger.incrementAndGet();
 //
@@ -12,6 +13,6 @@
 //        // 如果值没有被修改，原子性操作成功
 //        return atomicInteger.compareAndSet(oldValue, newValue);
 //    }
-//}
-//
-//
+}
+
+
