@@ -1,4 +1,5 @@
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AtomicIntegerDemo {
@@ -21,7 +22,7 @@ public class AtomicIntegerDemo {
                 }
             },String.valueOf(i)).start();
         }
-        countDownLatch.await();
+        countDownLatch.await(5, TimeUnit.SECONDS);
         // 因为 main 线程太快了 会提前进入
         System.out.println(myNumber.number);
     }
