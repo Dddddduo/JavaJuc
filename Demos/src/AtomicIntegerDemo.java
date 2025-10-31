@@ -16,6 +16,7 @@ public class AtomicIntegerDemo {
                 }catch (Exception e){
                     e.printStackTrace();
                 }finally {
+                    // 每个线程执行完后 都要 countDown 一次
                     countDownLatch.countDown();
                 }
             },String.valueOf(i)).start();
