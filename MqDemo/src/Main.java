@@ -1,6 +1,13 @@
 public class Main {
 
-
+    /**
+     * 消息队列的发布订阅模型
+     * 1.创建消息订阅者,最简单的模型
+     * 2.创建主题中心,主题中心管理了主题跟订阅者的关系，将主题跟订阅者进行绑定(Map<String,List<>())
+     * 3.消息发布者,依赖于主题中心,创建后能发送不同主题的消息
+     * 4.消息发布者调用内部依赖的主题中心的方法,发布消息给不同的订阅者
+     * @param args
+     */
     public static void main(String[] args) {
         // 1. 创建主题中心
         TopicCenter topicCenter = new TopicCenter();
