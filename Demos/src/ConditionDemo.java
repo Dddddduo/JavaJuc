@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 7.消费者线程此时有机会获取到 lock，它消费掉一个数据，使缓冲区不再满。
  * 8.消费者消费完后，调用 notFull.signal()。
  * 9.signal() 方法会从 notFull 的等待队列中唤醒一个线程（也就是刚才阻塞的生产者线程）。
- * 10.被唤醒的生产者线程会尝试重新获取 lock。
+ * 10.线程被唤醒后，会尝试重新获取 lock。
  * 11.如果成功获取到锁，它就会从 await() 方法返回，继续执行后续的代码（也就是生产数据）。
  */
 public class ConditionDemo {
